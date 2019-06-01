@@ -1,6 +1,5 @@
 package com.tutorialspoint;
 
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,6 +28,9 @@ public class HelloJasperReports {
             ArrayList<DataBean> dataList = DataBeanList.getDataBeanList();
             JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(dataList);
             Map<String, Object> parameters = new HashMap<>();
+            parameters.put("ReportTitle", "List of Contacts");
+            parameters.put("Author", "Prepared By Thiago Monteiro");
+            
 //            JasperFillManager.fillReportToFile(jasperFilePath, parameters, beanColDataSource);
             // 3.1 Gera um arquivo .jprint 
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
