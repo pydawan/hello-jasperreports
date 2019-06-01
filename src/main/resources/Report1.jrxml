@@ -26,6 +26,9 @@
    <field name = "name" class = "java.lang.String">
       <fieldDescription><![CDATA[name]]></fieldDescription>
    </field>
+   
+   <sortField name = "country" order = "Descending"/>
+   <sortField name = "name"/>
 
    <title>
       <band height = "70">
