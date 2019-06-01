@@ -29,6 +29,12 @@
    
    <sortField name = "country" order = "Descending"/>
    <sortField name = "name"/>
+   
+   <variable name = "countNumber" class = "java.lang.Integer" calculation = "Count">
+     <variableExpression>
+        <![CDATA[Boolean.TRUE]]>
+     </variableExpression>
+   </variable>
 
    <title>
       <band height = "70">
@@ -146,7 +152,7 @@
             <textElement textAlignment = "Center" verticalAlignment = "Middle" />
             
             <textFieldExpression class = "java.lang.String">
-               <![CDATA[$F{name}]]>
+               <![CDATA["  " + String.valueOf($V{countNumber}) + ". " + $F{name}]]>
             </textFieldExpression>
          </textField>
       
